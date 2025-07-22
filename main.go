@@ -27,6 +27,8 @@ func main() {
 	router.Use(loggerMiddleware())
 	router.GET("/", controllers.Home)
 	router.GET("/lists", controllers.GetLists)
-
+	router.POST("/lists", controllers.CreateList)
+	router.DELETE("lists/:id", controllers.DeleteList)
+	router.PUT("lists/:id", controllers.UpdateList)
 	router.Run("localhost:8000")
 }
