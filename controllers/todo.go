@@ -22,10 +22,10 @@ func GetLists(ctx *gin.Context) {
 		return
 	}
 	//Cek apakah list ada atau tidak
-	if len(todos) == 0 {
-		ctx.JSON(500, gin.H{"message": "Tidak ada Lists"})
-		return
-	}
+	// if len(todos) == 0 {
+	// 	ctx.JSON(500, gin.H{"message": "Tidak ada Lists"})
+	// 	return
+	// }
 	ctx.JSON(200, todos)
 }
 
